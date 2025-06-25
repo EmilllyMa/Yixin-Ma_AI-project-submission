@@ -1,1 +1,0 @@
-# Yixin-Ma_AI-project-submission
