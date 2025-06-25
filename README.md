@@ -59,5 +59,5 @@ This project analyzed employee message data to derive sentiment insights and ass
 ---
 
 ## 👤 Author
-- **[Your Name Here]**
-- Submit to: `jbirch@glynac.ai`
+- **[Yixin Ma]**
+- Submit to: `aman.jaiswar@glynac.ai`
