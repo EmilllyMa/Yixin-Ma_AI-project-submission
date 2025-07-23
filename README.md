@@ -1,63 +1,48 @@
 
 # Employee Sentiment Analysis – Summary
 
-## ✅ Project Deliverables
+## ✅ Project Objectives
 
-This project analyzed employee message data to derive sentiment insights and assess engagement risk.
-
-### 📌 Tasks Completed:
-1. **Sentiment Labeling** – Labeled each message as Positive, Negative, or Neutral.
-2. **Exploratory Data Analysis** – Explored data structure and sentiment distributions.
-3. **Monthly Score Calculation** – Aggregated sentiment scores per employee per month.
-4. **Employee Ranking** – Ranked top 3 positive and negative employees each month.
-5. **Flight Risk Detection** – Flagged employees with ≥ 4 negative messages in a rolling 30-day period.
-6. **Predictive Modeling** – Built a linear regression model to predict monthly sentiment scores.
+Analyze employee message data to:
+- Extract sentiment using a suitable model
+- Identify patterns in employee engagement
+- Detect potential flight risk behavior
+- Apply predictive modeling on sentiment trends
 
 ---
 
-## 📊 Key Outputs
+## 🛠️ Tasks Completed
 
-- **Top 3 Positive Employees** (Simulated):
-  - alice@example.com
-  - erin@example.com
-  - bob@example.com
-
-- **Top 3 Negative Employees** (Simulated):
-  - carol@example.com
-  - dave@example.com
-  - frank@example.com
-
-- **Flight Risk Employees** (Simulated):
-  - alice@example.com
-
-- **Model Metrics** (Simulated):
-  - MAE: 3.33
-  - RMSE: 4.48
-  - R²: -19.11
+1. **Sentiment Labeling** – Used VADER to assign Positive, Negative, or Neutral labels to each message.
+2. **Exploratory Data Analysis** – Visualized message frequency and sentiment distribution.
+3. **Monthly Score Calculation** – Calculated per-employee sentiment scores each month.
+4. **Employee Ranking** – Ranked the most positive and negative employees monthly.
+5. **Flight Risk Detection** – Flagged employees with ≥ 4 negative messages in any rolling 30-day window.
+6. **Predictive Modeling** – Built a regression model using message activity features.
 
 ---
 
-## 📁 File Structure
+## 🧠 Model Selection and Threshold Justification
 
-```
-├── test.csv                        # Original dataset (provided)
-├── test_with_sentiment.csv        # Dataset with sentiment labels (generated in Task 1)
-├── final_report.txt               # Final project report
-├── task1_sentiment_labeling.py    # Python script for Task 1
-├── sentiment_distribution.png     # EDA sentiment distribution chart
-├── monthly_message_count.png      # EDA monthly message count chart
-├── README.md                      # This file
-```
+We used the VADER sentiment analysis tool because it is optimized for short and informal texts like employee messages. To classify sentiment:
+
+- `compound` score > 0.05 → **Positive**
+- `compound` score < -0.05 → **Negative**
+- Between -0.05 and 0.05 → **Neutral**
+
+These thresholds follow the recommended VADER defaults and were validated on a hand-labeled sample of internal communication to ensure alignment with domain tone and vocabulary.
 
 ---
 
 ## 🔁 Next Steps
-- Improve sentiment labeling using fine-tuned BERT or prompt engineering.
-- Integrate topic modeling for deeper analysis.
-- Build an HR dashboard for real-time monitoring and alerting.
+
+- Enhance model features using department metadata or topic modeling
+- Apply classification models instead of regression
+- Build a dashboard for HR to monitor sentiment and engagement
 
 ---
 
 ## 👤 Author
-- **[Yixin Ma]**
-- Submit to: `aman.jaiswar@glynac.ai`
+- **Yixin Ma**
+- Submit to: `jbirch@glynac.ai`
+
